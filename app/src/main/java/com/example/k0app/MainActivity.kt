@@ -11,28 +11,61 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {                /*fun = fucniom  */
+
+    override fun onCreate(savedInstanceState: Bundle?) {                /*fun = funcion  */
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-            Log.d("esto es un Saludo", "hola mundo")
+            Log.d("0", "hola mundo")
 
         Toast.makeText(this,"esto es una tostada", Toast.LENGTH_LONG)
+        /*3*/
+            Log.d("3", getMyName("Rodolfo Peña Álvarez"))
+
+        /*4-5*/
+        Log.d("SUMA", getNumbers(uno0 = 10, dos0 = 20, tres0 = 30).toString())
+
+        /*6*/
+        asignateValue("Arataka Reigen", 'A')
+        var character = 'A'
+
+        /*8*/
+        Log.d("8", midiendo("Arataka Reigen").toString())
+
+        Log.d("8.1", changecharact(character).toString())
 
 
-        var numA =10
-        val numB =33
-        val numC =66
-        var resultado = numA + numB + numC
-        Log.d ("SUMA", "numA  $numB + $numC = $resultado")
-
-
-        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
     }
+
+
+
+    /*3*/
+    fun getMyName(name: String): String{
+        return "Mi nombre es: {$name}"
+    }
+
+    /*4-5*/
+    fun getNumbers(uno0: Int, dos0:Int, tres0:Int):Int{
+        return uno0+dos0+tres0
+    }
+    /*6-7*/
+    fun asignateValue(name: String,charac:Char){
+        return
+    }
+
+    /*8*/
+    fun midiendo(word:String): Int{
+        return word.count()
+    }
+    fun changecharact (newchar: Char): Char{
+            var newchar = 'F'
+            return newchar
+    }
+
+    /*9*/
+
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
