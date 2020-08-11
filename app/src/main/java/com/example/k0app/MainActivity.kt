@@ -17,6 +17,31 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
+
+        val toky = Dog()
+
+        Log.e("Default", toky.toString())
+
+        val mydog = Dog("cochallullo", 7)
+
+        Log.e("firstDog", mydog.toString())
+
+        /* Desafio Dia Dos*/
+
+        var bookname: String
+        val isbn : String
+        val pubicationyear: Int
+        val editorial: String
+        val nPAGES: String
+        var price: Int
+        val auth: String
+        var typebook: Boolean
+
+
+
+
+
+        /*
         Log.e("0", "hola mundo")
 
         Toast.makeText(this, "esto es una tostada", Toast.LENGTH_LONG)
@@ -68,6 +93,13 @@ class MainActivity : AppCompatActivity() {
         /*14-15-16*/
         Log.e("Hibrid answer", imprimiendoParametros("uno", "cero").toString())
         Log.e("IVA", obtieneIVA(52699).toString())
+        */
+
+
+        var juegoDeArcade = JuegoDeArcade("Game of Fear", 10, "Thriller")
+        Log.d ("Game", juegoDeArcade.toString())
+
+
     }
 
 
