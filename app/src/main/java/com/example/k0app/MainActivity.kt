@@ -17,25 +17,57 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-            Log.d("0", "hola mundo")
+        Log.e("0", "hola mundo")
 
-        Toast.makeText(this,"esto es una tostada", Toast.LENGTH_LONG)
+        Toast.makeText(this, "esto es una tostada", Toast.LENGTH_LONG)
         /*3*/
-            Log.d("3", getMyName("Rodolfo Peña Álvarez"))
+        Log.e("3", getMyName("Rodolfo Peña Álvarez"))
 
         /*4-5*/
-        Log.d("SUMA", getNumbers(uno0 = 10, dos0 = 20, tres0 = 30).toString())
+        val unocero = 10
+        val doscero = 20
+        val trescero = 30
+
+        Log.e("SUMA", getNumbers(unocero, doscero, trescero).toString())
 
         /*6*/
-        asignateValue("Arataka Reigen", 'A')
-        var character = 'A'
+        val narutoName: String
+        var charchar: Char
+
+        /*7*/
+        asignateValue("Arataka")
+        asigmateVar('0')
 
         /*8*/
-        Log.d("8", midiendo("Arataka Reigen").toString())
+        narutoName = "Arataka Reigen"
+        Log.e("8", midiendo(narutoName).toString())
 
-        Log.d("8.1", changecharact(character).toString())
+        charchar = '1'
+        Log.e("8.1", changecharact(charchar).toString())
 
+        /*9-10*/
+        var floatingN: Float
+        floatingN=0.1f
 
+        /*11*/
+
+        val byteMaximo = Byte.MAX_VALUE
+        val shortMaxxx = Short.MAX_VALUE
+        Log.e("11", "Valor máximo de almacenamiento para variables Byte:$byteMaximo" + "-" + "Valor máximo de almacenaiento para variables Short: $shortMaxxx")
+
+        /*12*/
+        val intMinimo = Int.MIN_VALUE
+        val longMinimo = Long.MIN_VALUE
+        Log.e("11", "Valor mínimo de almacenamiento para variables Int :$intMinimo" + "-" +"Valor minimo de almacenaiento para variables Long: $longMinimo")
+
+        /*13*/
+
+        var yesORnot:Boolean=true
+        Log.e("13", yesORnot.toString())
+
+        /*14-15-16*/
+        Log.e("Hibrid answer", imprimiendoParametros("uno", "cero").toString())
+        Log.e("IVA", obtieneIVA(52699).toString())
     }
 
 
@@ -49,11 +81,15 @@ class MainActivity : AppCompatActivity() {
     fun getNumbers(uno0: Int, dos0:Int, tres0:Int):Int{
         return uno0+dos0+tres0
     }
-    /*6-7*/
-    fun asignateValue(name: String,charac:Char){
-        return
+    /*7*/
+    fun asignateValue(name: String): String{
+        var name = "Arataka Reigen"
+                return name
     }
-
+    fun asigmateVar(charac:Char): Char{
+        var charac = 'A'
+        return charac
+    }
     /*8*/
     fun midiendo(word:String): Int{
         return word.count()
@@ -63,7 +99,17 @@ class MainActivity : AppCompatActivity() {
             return newchar
     }
 
-    /*9*/
+    /*14*/
+    fun imprimiendoParametros(param1:String,param2:String):Int{
+        val inputforprint: Int= param1.count() + param2.count()
+        return inputforprint
+    }
+
+    /*15*/
+    fun obtieneIVA(precio:Int):Double{
+        val iva =precio*0.19
+        return iva
+    }
 
 
 
