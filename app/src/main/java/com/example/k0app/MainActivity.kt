@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-
+        // Ejercicios
         val toky = Dog()
 
         Log.e("Default", toky.toString())
@@ -26,19 +26,57 @@ class MainActivity : AppCompatActivity() {
 
         Log.e("firstDog", mydog.toString())
 
+        "paralelepipedo".encriptarValor().print()
+
+
         /* Desafio Dia Dos*/
 
-        var bookname: String
-        val isbn : String
-        val pubicationyear: Int
-        val editorial: String
-        val nPAGES: String
-        var price: Int
-        val auth: String
-        var typebook: Boolean
+        var escolarBook0 = Library(
+            "Mirror",
+            "QWERTY",
+            10101,
+            "espejo",
+            "100",
+            502010,
+            "z4",
+            true
+        )
 
+        var escolarBook1 = Library(
+            "Mir",
+            "QWERT",
+            101,
+            "ejo",
+            "1",
+            5020,
+            "zh",
+            true
+        )
 
+        var escolarBook2 = Library(
+            "Mirror",
+            "QWE",
+            1101,
+            "espejo",
+            "00",
+            10,
+            "zh0r4",
+            true
+        )
 
+        val escolarBook3 = Library(
+            "Mirror",
+            "TY",
+            11001,
+            "espejo",
+            "1070",
+            502,
+            "0r4",
+            false
+        )
+
+        escolarBook0.formatedprice().print()
+        escolarBook3.printINFObook().print()
 
 
         /*
@@ -93,7 +131,7 @@ class MainActivity : AppCompatActivity() {
         /*14-15-16*/
         Log.e("Hibrid answer", imprimiendoParametros("uno", "cero").toString())
         Log.e("IVA", obtieneIVA(52699).toString())
-        */
+
 
 
         var juegoDeArcade = JuegoDeArcade("Game of Fear", 10, "Thriller")
@@ -142,22 +180,22 @@ class MainActivity : AppCompatActivity() {
         val iva =precio*0.19
         return iva
     }
+*/
 
-
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
     }
+        override fun onCreateOptionsMenu(menu: Menu): Boolean {
+            // Inflate the menu; this adds items to the action bar if it is present.
+            menuInflater.inflate(R.menu.menu_main, menu)
+            return true
+        }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
+        override fun onOptionsItemSelected(item: MenuItem): Boolean {
+            // Handle action bar item clicks here. The action bar will
+            // automatically handle clicks on the Home/Up button, so long
+            // as you specify a parent activity in AndroidManifest.xml.
+            return when (item.itemId) {
+                R.id.action_settings -> true
+                else -> super.onOptionsItemSelected(item)
+            }
         }
     }
-}
