@@ -29,11 +29,11 @@ data  class Library(var bookname: String,
     */
 
     fun formatedprice(): String{
-        return "$ ${this.price}"
+        return "$ ${this.price}"   //Trabajo del metodo a partir de la instansiacion de la clase con el constructor, haciendo referencia especificamente al atributo price de la misma clase
     }
 
     fun printINFObook():String{
-    return "Book Name: $bookname + ISBN: $isbn + Publicado:$publicationyear + Editorial:$editorial + N.Paginas:$nPAGES + Precio:$price + Autor:$auth + Disponibilidad Online:$typebook"
+    return "Book Name: $bookname | ISBN: $isbn | Publicado:$publicationyear | Editorial:$editorial | N.Paginas:$nPAGES | Precio:$price | Autor:$auth | Disponibilidad Online:$typebook"
     }
 
 }

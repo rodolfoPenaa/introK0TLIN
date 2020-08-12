@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         /*
         Log.e("0", "hola mundo")
 
-        Toast.makeText(this, "esto es una tostada", Toast.LENGTH_LONG)
+        Toast.makeText(this, "esto es una tostada", Toast.LENGTH_LONG.show()
         /*3*/
         Log.e("3", getMyName("Rodolfo Peña Álvarez"))
 
@@ -141,8 +141,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
-    /*3*/
+/*3*/
     fun getMyName(name: String): String{
         return "Mi nombre es: {$name}"
     }
